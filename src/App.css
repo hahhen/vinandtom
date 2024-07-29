@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+.App {
+  text-align: center;
+  font-family: 'K2D', sans-serif;
+}
+
+.App-logo {
+  pointer-events: none;
+}
+
+.App-hero{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-image: url('https://images.squarespace-cdn.com/content/v1/5aff0e0d3917ee5513af5749/1527604326501-GCHHSVIFWU1O9CV6SO3Y/ginasio_04.png?format=1500w');
+}
+
+.App-hero-left{
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-hero-subtitle{
+  letter-spacing: -3px;
+  margin: 0;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.App-hero-title{
+  display: flex;
+  font-size: 3.5rem;
+  color: #fff;
+}
+
+.App-hero-title > h1{
+  margin: 0;
+  line-height: 80%;
+  letter-spacing: -7px;
+}
+
+.App-header {
+  position: fixed;
+  background-color: transparent;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: rgb(112, 76, 182);
+}
