@@ -1,50 +1,137 @@
 @import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
   font-family: 'K2D', sans-serif;
 }
 
 .App-logo {
+  z-index: 1;
   pointer-events: none;
 }
 
-.App-hero{
+.App-hero {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-image: url('https://images.squarespace-cdn.com/content/v1/5aff0e0d3917ee5513af5749/1527605442033-EUCMSIS2CI9BIP2JBIUW/divertidos_bg_01.png?format=1500w');
+  background-repeat: no-repeat;
+}
+
+.App-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.App-banner>h1 {
+  font-size: 1.75rem;
+  font-weight: 200;
+  letter-spacing: -2px;
+  margin: 0;
+}
+
+.App-history-cont {
+  gap: 70px;
+  display: flex;
+  padding: 0 40px;
+}
+
+.App-history-text {
+  flex-basis: 0;
+  flex-grow: 1;
+  text-align: justify;
+}
+
+.App-history-text>p:first-child {
+  margin-top: 0;
+}
+
+.App-history-images {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+.App-history-images > img{
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1500px;
+}
+
+.App-hero-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  width: 100%;
-  height: 400px;
-  background-position: center;
-  background-image: url('https://images.squarespace-cdn.com/content/v1/5aff0e0d3917ee5513af5749/1527604326501-GCHHSVIFWU1O9CV6SO3Y/ginasio_04.png?format=1500w');
 }
 
-.App-hero-left{
-  padding: 50px;
+.App-hero-left {
+  z-index: 1;
+  padding: 0px 50px 100px 50px;
   display: flex;
   flex-direction: column;
 }
 
-.App-hero-subtitle{
+.App-hero-gradient {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 60%, rgb(255, 255, 255) 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.App-hero-right {
+  z-index: 1;
+  padding-right: 50px;
+}
+
+.App-hero-subtitle {
   letter-spacing: -3px;
   margin: 0;
   font-size: 2.5rem;
   color: #fff;
 }
 
-.App-hero-title{
+.App-hero-title {
   display: flex;
   font-size: 3.5rem;
   color: #fff;
 }
 
-.App-hero-title > h1{
+.App-hero-title-vin {
+  color: #F8DA04;
+}
+
+.App-hero-title-tom {
+  color: #266AA0;
+}
+
+.App-hero-title>h1 {
   margin: 0;
   line-height: 80%;
   letter-spacing: -7px;
 }
 
 .App-header {
+  z-index: 1;
   position: fixed;
   background-color: transparent;
   padding: 20px;
