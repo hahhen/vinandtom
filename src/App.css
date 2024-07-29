@@ -27,11 +27,16 @@
 }
 
 .App-banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: 130px;
+  color: #fff;
+  margin: 30px 0;
 }
 
 .App-banner>h1 {
@@ -62,18 +67,23 @@
   flex-basis: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 15px;
-  grid-row-gap: 15px;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
 }
 
-.App-history-images > img{
+.App-history-images>img {
+  width: 100%;
   object-fit: cover;
-  width: 150px;
-  height: 150px;
+  aspect-ratio: 1/1;
 }
 
 .container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.container>*:first-child{
   width: 100%;
   max-width: 1500px;
 }
@@ -142,4 +152,21 @@
 
 .App-link {
   color: rgb(112, 76, 182);
+}
+
+.App-designs-cont{
+  padding: 0 40px;
+}
+
+.App-designs-images{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.App-designs-images>img{
+  width: 400px;
+  flex-basis: 0;
+  flex-grow: 1;
+  object-fit: cover;
+  aspect-ratio: 613/425;
 }
