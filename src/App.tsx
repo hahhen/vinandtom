@@ -1,6 +1,4 @@
 import "./App.css"
-import { Counter } from "./features/counter/Counter"
-import { Quotes } from "./features/quotes/Quotes"
 import logo from "./logo.png"
 import vinandtom from "./vinandtom.png"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
@@ -16,13 +14,14 @@ const App = () => {
         <div className="App-hero-gradient"></div>
         <div className="App-container">
           <div className="App-hero-wrapper flex-col sm:flex-row items-center">
-            <div className="App-hero-left">
+            <div className="App-hero-left relative">
               <h2 className="App-hero-subtitle">
                 Rio2016:
               </h2>
               <div className="App-hero-title text-5xl md:text-6xl lg:text-8xl">
                 <h1 className="App-hero-title-vin">Vinicius&nbsp;</h1><h1>&&nbsp;</h1><h1 className="App-hero-title-tom">Tom</h1>
               </div>
+              <div className="h-14 bg-cover w-14 lg:w-20 lg:h-20 absolute -top-10 right-0" style={{ backgroundImage: "url('https://images.squarespace-cdn.com/content/v1/5aff0e0d3917ee5513af5749/1528146291574-BFNPABUE88OR7YIDJHJS/selos_divertidos_interna_02.png?format=750w')" }}></div>
             </div>
             <div className="App-hero-right">
               <img src={vinandtom} width={300} />
@@ -75,20 +74,42 @@ const App = () => {
         </div>
         <div className="App-container px-8">
           <div className="App-designs-cont">
-              <Carousel>
-                <CarouselContent>
-                  <CarouselItem><img src="https://images.squarespace-cdn.com/content/v1/5aff0e0d3917ee5513af5749/1527712085866-PBNEFV78SHZ2MSZB1WEV/Mascotes+EP+06+Na+cozinha+Storyboard_0007.png?format=1500w" /></CarouselItem>
-                  <CarouselItem><img src="https://images.squarespace-cdn.com/content/v1/5aff0e0d3917ee5513af5749/1527712085864-CMQEHSPTGI3AL4USBV9O/Mascotes+EP+06+Na+cozinha+Storyboard_0008.png?format=1500w"/></CarouselItem>
-                  <CarouselItem><img src="https://images.squarespace-cdn.com/content/v1/5aff0e0d3917ee5513af5749/1527712090597-NOOKOZ0FFNR9U0UAOUO1/Mascotes+EP+06+Na+cozinha+Storyboard_0009.png?format=1500w" /></CarouselItem>
-                  <CarouselItem><img src="https://images.squarespace-cdn.com/content/v1/5aff0e0d3917ee5513af5749/1527712090054-46O7ONWCT08INSZMQHBN/Mascotes+EP+06+Na+cozinha+Storyboard_0010.png?format=1500w" /></CarouselItem>
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-              </Carousel>
+            <Carousel>
+              <CarouselContent>
+                <CarouselItem><img src="https://images.squarespace-cdn.com/content/v1/5aff0e0d3917ee5513af5749/1527712085866-PBNEFV78SHZ2MSZB1WEV/Mascotes+EP+06+Na+cozinha+Storyboard_0007.png?format=1500w" /></CarouselItem>
+                <CarouselItem><img src="https://images.squarespace-cdn.com/content/v1/5aff0e0d3917ee5513af5749/1527712085864-CMQEHSPTGI3AL4USBV9O/Mascotes+EP+06+Na+cozinha+Storyboard_0008.png?format=1500w" /></CarouselItem>
+                <CarouselItem><img src="https://images.squarespace-cdn.com/content/v1/5aff0e0d3917ee5513af5749/1527712090597-NOOKOZ0FFNR9U0UAOUO1/Mascotes+EP+06+Na+cozinha+Storyboard_0009.png?format=1500w" /></CarouselItem>
+                <CarouselItem><img src="https://images.squarespace-cdn.com/content/v1/5aff0e0d3917ee5513af5749/1527712090054-46O7ONWCT08INSZMQHBN/Mascotes+EP+06+Na+cozinha+Storyboard_0010.png?format=1500w" /></CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
       </section>
-    </div>
+      <section className="App-credits">
+        <div className="App-banner" style={{ backgroundImage: "url('https://images.squarespace-cdn.com/content/v1/5aff0e0d3917ee5513af5749/1527626669121-L1CSVDX1APHIT2UIUWO8/rio.png?format=1500w')" }}>
+          <h1>Credits</h1>
+        </div>
+        <div className="App-container">
+          <div className="App-credits-cont">
+            <h6 id="func" style={{ textAlign: "right" }}><p id="line">Directed by</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Luciana Eguti <br /> Paulo Muppet<br /></p></h6><h6 id="func" style={{ textAlign: "right" }}><p id="line">Co-Directors</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Fernando Finamore <br /> Beto Gomez<br /></p></h6><h6 id="func" style={{ textAlign: "right" }}><p id="line">Executive Producers</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Luciana Eguti <br /> Paulo Muppet<br /></p></h6 ><h6 id="func" style={{ textAlign: "right" }}><p id="line">Script</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Luciana Eguti <br /> Paulo Muppet <br /> Pedro Eboli<br /></p ></h6 ><h6 id="func" style={{ textAlign: "right" }}><p id="line">Storyboard Artists</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Mika Takahashi <br /> Pablo Max <br /> Pedro Mendes <br /> Perin <br /> PJ <br /> Rafael Schmidt <br /> Rosaria Moreira <br /> Tiago Kogi<br /></p ></h6 ><h6 id="func" style={{ textAlign: "right" }}><p id="line">Animatic</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Beto Gomez <br /> Gabriel Franklin <br /> Makoto Matsumura <br /> Marcelo Perin <br /> Mika Takahashi <br /> Pablo Max <br /> Paola Hiroki <br /> Paulo Muppet <br /> Rafael Gallardo <br /> Zé Vaamonde<br /></p ></h6 ><h6 id="func" style={{ textAlign: "right" }}><p id="line">Art Director</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Thiago Soares<br /></p></h6 ><h6 id="func" style={{ textAlign: "right" }}><p id="line">Background Design</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Allan Costa <br /> Daniel Caetano <br /> Leon Silva <br /> Maykeon Salvatierra <br /> Pedro Mendes <br /> Tiago Kogi <br /> Will Fernandes<br /></p ></h6 ><h6 id="func" style={{ textAlign: "right" }}><p id="line">Characters Design</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Birdo<br /></p></h6 ><h6 id="func" style={{ textAlign: "right" }}><p id="line">Additional Character and Props Design</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Camila Bremer<br /></p></h6 ><h6 id="func" style={{ textAlign: "right" }}><p id="line">Producer</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Raquel Fukuda<br /></p></h6 ><h6 id="func" style={{ textAlign: "right" }}><p id="line">Line Producer</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Chris Parentoni<br /></p></h6 ><h6 id="func" style={{ textAlign: "right" }}><p id="line">Opening Credits</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Birdo<br /></p></h6 ><h6 id="func" style={{ textAlign: "right" }}><p id="line">Casting, Production and Original Voice Recording</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Ultrassom Music Ideas<br /></p></h6 ><h6 id="func" style={{ textAlign: "right" }}><p id="line">Casting and Voice Director</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Melissa Garcia<br /></p></h6 ><h6 id="func" style={{ textAlign: "right" }}><p id="line">Original Voices</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Bruno Mello - Tom <br /> Hugo Picchi - Vinícius <br /> Mariana Zink - irmã carioca <br /> Simone Evans - irmã carioca<br /></p ></h6 ><h6 id="func" style={{ textAlign: "right" }}><p id="line">Animation Director</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Beto Gomez <br /> Fernando Finamore<br /></p ></h6 ><h6 id="func" style={{ textAlign: "right" }}><p id="line">Animators</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Allan Sanchez <br /> Anderson Lister <br /> Antonio Linhares <br /> Beto Gomez <br /> Camila Bremer <br /> Daniel Caetano da Silva <br /> Fernando Finamore <br /> Gabriel Franklin <br /> Gabriel Gomes <br /> Ivanildo Soares <br /> José Vaamonde <br /> Maikeon Salvatierra <br /> Makoto Matsumura <br /> Pablo Max <br /> Paola Hiroki <br /> Pedro Mendes <br /> PJ <br /> Rafa Rosa <br /> Rodrigo Estravini <br /> William Fernandes <br /> Yuri "Golfinho" Custodio<br /></p ></h6 ><h6 id="func" style={{ textAlign: "right" }}><p id="line">EFX Animation</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Camila Bremer <br /> Paola Hiroki<br /></p ></h6 ><h6 id="func" style={{ textAlign: "right" }}><p id="line">Soundtrack and Mixing</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Ultrassom Music Ideas<br /></p></h6 ><h6 id="func" style={{ textAlign: "right" }}><p id="line">Post-Productioon</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Luciana Eguti <br /> Paola Hiroki<br /></p ></h6 ><h6 id="func" style={{ textAlign: "right" }}><p id="line">Realization</p></h6><h6 id="nome" style={{ textAlign: "left" }}><p id="line">Birdo<br /></p></h6 >
+          </div >
+        </div >
+      </section >
+      <footer>
+        <div className="App-container">
+          <div className="App-footer flex flex-col items-center m-20">
+            <div className="App-footer-left">
+              <h1>©2024 Birdo</h1>
+            </div>
+            <div className="App-footer-right">
+              <h1>Developed for Ms. Steps</h1>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div >
   )
 }
 
